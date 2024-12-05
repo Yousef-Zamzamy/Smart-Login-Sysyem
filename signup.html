@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login System</title>
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="container my-5 text-white text-center">
+      <div class="logincontainer p-5 w-75 m-auto text-info">
+        <h1>Smart Login System</h1>
+        <input
+          id="signupName"
+          class="form-control my-3"
+          type="text"
+          placeholder="Enter your Name"
+          oninput="validatinInputs(this)"
+        />
+        <div class="alert alert-danger p-1 d-none">
+          Name Should be at least 3 chars
+        </div>
+        <input
+          id="signupemail"
+          class="form-control my-3"
+          type="text"
+          placeholder="Enter your Email"
+          oninput="validatinInputs(this)"
+        />
+        <div class="alert alert-danger p-2 d-none">
+          Email should be Valid
+        </div>
+        <input
+          id="signuppassword"
+          class="form-control my-3"
+          type="password"
+          placeholder="Enter your password"
+          oninput="validatinInputs(this)"
+        />
+        <div class="alert alert-danger p-2 d-none">
+          Password should be at least 8 character and start with capital letter
+        </div>
+        <p class="text-danger p-1 my-2 d-none error">All inputs are required</p>
+        <p class="text-danger p-1 my-2 d-none error2">email already exists</p>
+        <p class="text-success p-1 my-2 d-none success">Success</p>
+        <button onclick="signUp()" class="btn btn-outline-info my-2 w-100">
+          Sign Up
+        </button>
+        <p class="text-white">
+          You have an account?
+          <a class="text-white" href="index.html">Sign IN</a>
+        </p>
+      </div>
+    </div>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
